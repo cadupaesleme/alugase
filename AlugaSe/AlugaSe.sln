@@ -1,0 +1,50 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.705
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "0 - Presentation", "0 - Presentation", "{F9D5A817-06AE-4B7C-A79F-EFE42A737095}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1 - Application", "1 - Application", "{5E9B2B38-EB1E-4073-A312-AC08EC0BC2A9}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2 - Domain", "2 - Domain", "{1E1B28DE-0D70-46EE-A8BD-46ECDB77CE39}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3 - Infrastructure", "3 - Infrastructure", "{56F142AB-9125-410A-9EC7-A169177C0EA4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AlugaSe.DomainModel", "AlugaSe.DomainModel\AlugaSe.DomainModel.csproj", "{EBCB8A1B-2102-44CD-9947-0CBEC72A923F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AlugaSe.DomainService", "AlugaSe.DomainService\AlugaSe.DomainService.csproj", "{04F0E258-672F-43DA-8360-3F1219762738}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AlugaSe.Infrastructure.DataAccess", "AlugaSe.Infrastructure.DataAccess\AlugaSe.Infrastructure.DataAccess.csproj", "{EFD0CC2E-AF98-486E-912A-961C6AB9A6D1}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{EBCB8A1B-2102-44CD-9947-0CBEC72A923F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EBCB8A1B-2102-44CD-9947-0CBEC72A923F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EBCB8A1B-2102-44CD-9947-0CBEC72A923F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EBCB8A1B-2102-44CD-9947-0CBEC72A923F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{04F0E258-672F-43DA-8360-3F1219762738}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{04F0E258-672F-43DA-8360-3F1219762738}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{04F0E258-672F-43DA-8360-3F1219762738}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{04F0E258-672F-43DA-8360-3F1219762738}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EFD0CC2E-AF98-486E-912A-961C6AB9A6D1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EFD0CC2E-AF98-486E-912A-961C6AB9A6D1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EFD0CC2E-AF98-486E-912A-961C6AB9A6D1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EFD0CC2E-AF98-486E-912A-961C6AB9A6D1}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{EBCB8A1B-2102-44CD-9947-0CBEC72A923F} = {1E1B28DE-0D70-46EE-A8BD-46ECDB77CE39}
+		{04F0E258-672F-43DA-8360-3F1219762738} = {1E1B28DE-0D70-46EE-A8BD-46ECDB77CE39}
+		{EFD0CC2E-AF98-486E-912A-961C6AB9A6D1} = {56F142AB-9125-410A-9EC7-A169177C0EA4}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {FBCC3FA5-5EC0-48C8-BCD9-7A8857FAD654}
+	EndGlobalSection
+EndGlobal
