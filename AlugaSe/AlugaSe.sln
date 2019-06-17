@@ -17,6 +17,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AlugaSe.DomainService", "Al
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AlugaSe.Infrastructure.DataAccess", "AlugaSe.Infrastructure.DataAccess\AlugaSe.Infrastructure.DataAccess.csproj", "{EFD0CC2E-AF98-486E-912A-961C6AB9A6D1}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AlugaSe.WebApplication", "AlugaSe.WebApplication\AlugaSe.WebApplication.csproj", "{9ADC49EF-ECE2-4318-B4F2-1FDF31BC29CF}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -35,6 +37,10 @@ Global
 		{EFD0CC2E-AF98-486E-912A-961C6AB9A6D1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EFD0CC2E-AF98-486E-912A-961C6AB9A6D1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EFD0CC2E-AF98-486E-912A-961C6AB9A6D1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9ADC49EF-ECE2-4318-B4F2-1FDF31BC29CF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9ADC49EF-ECE2-4318-B4F2-1FDF31BC29CF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9ADC49EF-ECE2-4318-B4F2-1FDF31BC29CF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9ADC49EF-ECE2-4318-B4F2-1FDF31BC29CF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -43,6 +49,7 @@ Global
 		{EBCB8A1B-2102-44CD-9947-0CBEC72A923F} = {1E1B28DE-0D70-46EE-A8BD-46ECDB77CE39}
 		{04F0E258-672F-43DA-8360-3F1219762738} = {1E1B28DE-0D70-46EE-A8BD-46ECDB77CE39}
 		{EFD0CC2E-AF98-486E-912A-961C6AB9A6D1} = {56F142AB-9125-410A-9EC7-A169177C0EA4}
+		{9ADC49EF-ECE2-4318-B4F2-1FDF31BC29CF} = {F9D5A817-06AE-4B7C-A79F-EFE42A737095}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {FBCC3FA5-5EC0-48C8-BCD9-7A8857FAD654}
