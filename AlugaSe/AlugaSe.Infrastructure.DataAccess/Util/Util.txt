@@ -1,0 +1,6 @@
+﻿=====ADD-MIGRATION
+dotnet ef migrations add  --context AlugaSeContext -p .\AlugaSe.Infrastructure.DataAccess\AlugaSe.Infrastructure.DataAccess.csproj -s .\AlugaSe.WebApplication\AlugaSe.WebApplication.csproj
+
+
+=====UPDATE
+dotnet ef database update -p .\AlugaSe.Infrastructure.DataAccess\AlugaSe.Infrastructure.DataAccess.csproj -s .\AlugaSe.WebApplication\AlugaSe.WebApplication.csproj

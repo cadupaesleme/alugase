@@ -16,21 +16,21 @@ namespace AlugaSe.Infrastructure.DataAccess.Contexts
 
         public AlugaSeContext(DbContextOptions<AlugaSeContext> options) : base(options)
         {
-            //Database.EnsureCreated();
+            Database.EnsureCreated();
         }
 
-        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-        {
-            {
-                if (optionsBuilder.IsConfigured == false)
-                {
-                    optionsBuilder.UseSqlServer(
-                   @"Data Source=(localdb)\\mssqllocaldb;Initial Catalog=AlugaSeDB;
-                       Integrated Security=True;");
-                }
-                base.OnConfiguring(optionsBuilder);
-            }
-        }
+        //protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        //{
+        //    {
+        //        if (optionsBuilder.IsConfigured == false)
+        //        {
+        //            optionsBuilder.UseSqlServer(
+        //           @"Data Source=(localdb)\\mssqllocaldb;Initial Catalog=AlugaSeDB;
+        //               Integrated Security=True;");
+        //        }
+        //        base.OnConfiguring(optionsBuilder);
+        //    }
+        //}
 
         //protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         //{
@@ -46,6 +46,9 @@ namespace AlugaSe.Infrastructure.DataAccess.Contexts
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
+
+            base.OnModelCreating(modelBuilder);
+
             //base.OnModelCreating(modelBuilder);
 
             //modelBuilder

@@ -11,13 +11,13 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2 - Domain", "2 - Domain", 
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3 - Infrastructure", "3 - Infrastructure", "{56F142AB-9125-410A-9EC7-A169177C0EA4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AlugaSe.DomainModel", "AlugaSe.DomainModel\AlugaSe.DomainModel.csproj", "{EBCB8A1B-2102-44CD-9947-0CBEC72A923F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AlugaSe.DomainModel", "AlugaSe.DomainModel\AlugaSe.DomainModel.csproj", "{EBCB8A1B-2102-44CD-9947-0CBEC72A923F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AlugaSe.DomainService", "AlugaSe.DomainService\AlugaSe.DomainService.csproj", "{04F0E258-672F-43DA-8360-3F1219762738}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AlugaSe.DomainService", "AlugaSe.DomainService\AlugaSe.DomainService.csproj", "{04F0E258-672F-43DA-8360-3F1219762738}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AlugaSe.Infrastructure.DataAccess", "AlugaSe.Infrastructure.DataAccess\AlugaSe.Infrastructure.DataAccess.csproj", "{EFD0CC2E-AF98-486E-912A-961C6AB9A6D1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AlugaSe.Infrastructure.DataAccess", "AlugaSe.Infrastructure.DataAccess\AlugaSe.Infrastructure.DataAccess.csproj", "{EFD0CC2E-AF98-486E-912A-961C6AB9A6D1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AlugaSe.WebApplication", "AlugaSe.WebApplication\AlugaSe.WebApplication.csproj", "{9ADC49EF-ECE2-4318-B4F2-1FDF31BC29CF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AlugaSe.WebApplication", "AlugaSe.WebApplication\AlugaSe.WebApplication.csproj", "{9ADC49EF-ECE2-4318-B4F2-1FDF31BC29CF}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

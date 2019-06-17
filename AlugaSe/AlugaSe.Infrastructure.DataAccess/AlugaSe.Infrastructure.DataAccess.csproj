@@ -17,4 +17,25 @@
     <ProjectReference Include="..\AlugaSe.DomainModel\AlugaSe.DomainModel.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Compile Update="AlugaSeDB.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>AlugaSeDB.xsd</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="AlugaSeDB.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>AlugaSeDB.Designer.cs</LastGenOutput>
+    </None>
+    <None Update="DB\AlugaSe.mdf">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </None>
+    <None Update="DB\AlugaSe_log.ldf">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
 </Project>
