@@ -1,6 +1,7 @@
 ﻿using AlugaSe.DomainModel.Entities;
 using AlugaSe.DomainModel.Interfaces.Repositories;
 using AlugaSe.Infrastructure.DataAccess.Contexts;
+using AlugaSe.Infrastructure.DataAccess.Factories;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -11,9 +12,9 @@ namespace AlugaSe.Infrastructure.DataAccess.Repositories
     {
         private readonly AlugaSeContext _db;
 
-        public VendorEntityFrameworkRepository(AlugaSeContext db)
+        public VendorEntityFrameworkRepository()
         {
-            _db = db;
+            _db = new AlugaSeContextFactory().CreateDbContext(null);
         }
 
         public void Create(Vendor entity)
