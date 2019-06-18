@@ -1,4 +1,5 @@
 ﻿using AlugaSe.DomainModel.Entities;
+using AlugaSe.DomainModel.ValueObjects;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
@@ -16,7 +17,7 @@ namespace AlugaSe.Infrastructure.DataAccess.Contexts
 
         public AlugaSeContext(DbContextOptions<AlugaSeContext> options) : base(options)
         {
-            Database.EnsureCreated();
+            //Database.EnsureCreated();
         }
 
         //protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
@@ -49,23 +50,37 @@ namespace AlugaSe.Infrastructure.DataAccess.Contexts
 
             base.OnModelCreating(modelBuilder);
 
-            //base.OnModelCreating(modelBuilder);
+            modelBuilder
+                .Entity<Vendor>()
+                .Property(gender => gender.Gender)
+                .HasConversion(
+                    gender => gender.ToString(),
+                    gender => Gender.Parse(gender))
+                .HasColumnName("Gender");
 
-            //modelBuilder
-            //    .Entity<Account>()
-            //    .Property(account => account.Amount)
-            //    .HasConversion(
-            //        amount => amount.ToString(),
-            //        amount => Amount.Parse(amount))
-            //    .HasColumnName("Amount");
+            modelBuilder
+                .Entity<Vendor>()
+                .Property(identification => identification.Identification)
+                .HasConversion(
+                    identification => identification.ToString(),
+                    identification => Identification.Parse(identification))
+                .HasColumnName("Identification");
 
-            //modelBuilder
-            //    .Entity<DbCurrency>()
-            //    .Property(dbCurrency => dbCurrency.Currency)
-            //    .HasConversion(
-            //        currency => currency.ToString(),
-            //        currency => new Currency(currency))
-            //    .HasColumnName("Currency");
+            modelBuilder
+                .Entity<Customer>()
+                .Property(gender => gender.Gender)
+                .HasConversion(
+                    gender => gender.ToString(),
+                    gender => Gender.Parse(gender))
+                .HasColumnName("Gender");
+
+            modelBuilder
+                .Entity<Customer>()
+                .Property(identification => identification.Identification)
+                .HasConversion(
+                    identification => identification.ToString(),
+                    identification => Identification.Parse(identification))
+                .HasColumnName("Identification");
 
         }
     }

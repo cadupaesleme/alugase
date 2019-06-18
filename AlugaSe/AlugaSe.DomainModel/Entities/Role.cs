@@ -9,9 +9,9 @@ namespace AlugaSe.DomainModel.Entities
     {
         public string Name { get; set; }
         public string Address { get; set; }
-        //public Identification Identification { get; set; }
+        public Identification Identification { get; set; }
         public decimal Rating { get; set; }
         public DateTime? BirthDay { get; set; }
-        //public Gender Gender { get; set; }
+        public Gender Gender { get; set; }
     }
 }
