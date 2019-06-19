@@ -4,14 +4,16 @@ using AlugaSe.Infrastructure.DataAccess.Contexts;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace AlugaSe.Infrastructure.DataAccess.Migrations
 {
     [DbContext(typeof(AlugaSeContext))]
-    partial class AlugaSeContextModelSnapshot : ModelSnapshot
+    [Migration("20190618224356_RemoveRating")]
+    partial class RemoveRating
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

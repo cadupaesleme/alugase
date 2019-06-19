@@ -6,33 +6,33 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using AlugaSe.DomainModel.Entities;
-using AlugaSe.Infrastructure.DataAccess.Contexts;
-using AlugaSe.DomainModel.Interfaces.Repositories;
+using AlugaSe.DomainService;
+using AlugaSe.DomainService.Interfaces;
 
 namespace AlugaSe.WebApplication.Controllers
 {
-    public class VendorsController : Controller
+    public class VendorController : Controller
     {
-        private readonly IVendorRepository _repository;
+        private readonly IVendorService _vendorService;
 
-        public VendorsController(IVendorRepository repository
-            )
+        public VendorController(IVendorService vendorService)
         {
-            _repository = repository;
+            _vendorService = vendorService;
         }
 
+        //// GET: Vendor
         public ActionResult Index()
         {
-            return View(_repository.ReadAll());
+            return View(_vendorService.ReadAll());
         }
 
-        //// GET: Vendors
+        // GET: Vendor
         //public async Task<IActionResult> Index()
         //{
         //    return View(await _context.Vendors.ToListAsync());
         //}
 
-        //// GET: Vendors/Details/5
+        //// GET: Vendor/Details/5
         //public async Task<IActionResult> Details(Guid? id)
         //{
         //    if (id == null)
@@ -50,18 +50,18 @@ namespace AlugaSe.WebApplication.Controllers
         //    return View(vendor);
         //}
 
-        //// GET: Vendors/Create
+        //// GET: Vendor/Create
         //public IActionResult Create()
         //{
         //    return View();
         //}
 
-        //// POST: Vendors/Create
+        //// POST: Vendor/Create
         //// To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         //// more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         //[HttpPost]
         //[ValidateAntiForgeryToken]
-        //public async Task<IActionResult> Create([Bind("Name,Address,Identification,Rating,BirthDay,Gender,Id")] Vendor vendor)
+        //public async Task<IActionResult> Create([Bind("Name,Address,Identification,BirthDay,Gender,Id")] Vendor vendor)
         //{
         //    if (ModelState.IsValid)
         //    {
@@ -73,7 +73,7 @@ namespace AlugaSe.WebApplication.Controllers
         //    return View(vendor);
         //}
 
-        //// GET: Vendors/Edit/5
+        //// GET: Vendor/Edit/5
         //public async Task<IActionResult> Edit(Guid? id)
         //{
         //    if (id == null)
@@ -89,12 +89,12 @@ namespace AlugaSe.WebApplication.Controllers
         //    return View(vendor);
         //}
 
-        //// POST: Vendors/Edit/5
+        //// POST: Vendor/Edit/5
         //// To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         //// more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         //[HttpPost]
         //[ValidateAntiForgeryToken]
-        //public async Task<IActionResult> Edit(Guid id, [Bind("Name,Address,Identification,Rating,BirthDay,Gender,Id")] Vendor vendor)
+        //public async Task<IActionResult> Edit(Guid id, [Bind("Name,Address,Identification,BirthDay,Gender,Id")] Vendor vendor)
         //{
         //    if (id != vendor.Id)
         //    {
@@ -124,7 +124,7 @@ namespace AlugaSe.WebApplication.Controllers
         //    return View(vendor);
         //}
 
-        //// GET: Vendors/Delete/5
+        //// GET: Vendor/Delete/5
         //public async Task<IActionResult> Delete(Guid? id)
         //{
         //    if (id == null)
@@ -142,7 +142,7 @@ namespace AlugaSe.WebApplication.Controllers
         //    return View(vendor);
         //}
 
-        //// POST: Vendors/Delete/5
+        //// POST: Vendor/Delete/5
         //[HttpPost, ActionName("Delete")]
         //[ValidateAntiForgeryToken]
         //public async Task<IActionResult> DeleteConfirmed(Guid id)

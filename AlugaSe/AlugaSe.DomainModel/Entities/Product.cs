@@ -10,6 +10,5 @@ namespace AlugaSe.DomainModel.Entities
         public string Description { get; set; }
         public decimal UnitPrice { get; set; }
         public Vendor Vendor { get; set; }
-        public decimal Rating { get; set; }
     }
 }

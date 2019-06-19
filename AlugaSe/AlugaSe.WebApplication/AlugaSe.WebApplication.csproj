@@ -11,6 +11,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\AlugaSe.DomainService\AlugaSe.DomainService.csproj" />
     <ProjectReference Include="..\AlugaSe.Infrastructure.DataAccess\AlugaSe.Infrastructure.DataAccess.csproj" />
   </ItemGroup>
 
