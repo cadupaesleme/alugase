@@ -12,5 +12,6 @@ namespace AlugaSe.DomainModel.Interfaces.Repositories
         IEnumerable<T> ReadAll();
         void Update(T entity);
         void Delete(EntityId id);
+        void SaveChanges();
     }
 }

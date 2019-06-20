@@ -6,6 +6,7 @@ using System.Text;
 namespace AlugaSe.DomainModel.Entities
 {
     public class Customer : Role<Guid>
-    {        
+    {
+        public virtual ICollection<Rent> Rents { get; set; }
     }
 }

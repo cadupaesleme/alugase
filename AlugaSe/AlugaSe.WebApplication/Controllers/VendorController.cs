@@ -77,6 +77,8 @@ namespace AlugaSe.WebApplication.Controllers
                     _vendorService.Update(vendor);
                 }
 
+                _vendorService.Complete();
+
                 return RedirectToAction(nameof(Index));
             }
 
@@ -131,6 +133,8 @@ namespace AlugaSe.WebApplication.Controllers
         public IActionResult DeleteConfirmed(Guid id)
         {
             _vendorService.Delete(id);
+            _vendorService.Complete();
+
             return RedirectToAction(nameof(Index));
         }
 

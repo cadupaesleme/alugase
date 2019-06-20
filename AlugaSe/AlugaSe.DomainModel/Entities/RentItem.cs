@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Text;
 
 namespace AlugaSe.DomainModel.Entities
@@ -12,5 +13,11 @@ namespace AlugaSe.DomainModel.Entities
         public virtual Product Product { get; set; }
         public DateTime InitialDate { get; set; }
         public DateTime EndDate { get; set; }
+
+        [ForeignKey("Rent")]
+        public Guid RentId { get; set; }
+
+        [ForeignKey("Product")]
+        public Guid ProductId { get; set; }
     }
 }

@@ -8,18 +8,18 @@ using System.Text;
 
 namespace AlugaSe.Infrastructure.DataAccess.Repositories
 {
-    public class VendorEntityFrameworkRepository : IVendorRepository
+    public class RentItemEntityFrameworkRepository : IRentItemRepository
     {
         private readonly AlugaSeContext _db;
 
-        public VendorEntityFrameworkRepository()
+        public RentItemEntityFrameworkRepository()
         {
             _db = new AlugaSeContextFactory().CreateDbContext(null);
         }
 
-        public void Create(Vendor entity)
+        public void Create(RentItem entity)
         {
-            _db.Vendors.Add(entity);
+            _db.RentItems.Add(entity);
         }
 
         public void Delete(Guid id)
@@ -27,19 +27,19 @@ namespace AlugaSe.Infrastructure.DataAccess.Repositories
             _db.Remove(Read(id));
         }
 
-        public Vendor Read(Guid id)
+        public RentItem Read(Guid id)
         {
-            return _db.Vendors.Find(id);
+            return _db.RentItems.Find(id);
         }
 
-        public IEnumerable<Vendor> ReadAll()
+        public IEnumerable<RentItem> ReadAll()
         {
-            return _db.Vendors;
+            return _db.RentItems;
         }
 
-        public void Update(Vendor entity)
+        public void Update(RentItem entity)
         {
-            _db.Vendors.Update(entity);
+            _db.RentItems.Update(entity);
         }
 
         public void SaveChanges()

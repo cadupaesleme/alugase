@@ -40,5 +40,10 @@ namespace AlugaSe.DomainService.Services
         {
             _vendorRepository.Delete(id);
         }
+
+        public void Complete()
+        {
+            _vendorRepository.SaveChanges();
+        }
     }
 }

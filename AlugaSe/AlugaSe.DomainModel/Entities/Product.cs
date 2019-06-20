@@ -14,5 +14,8 @@ namespace AlugaSe.DomainModel.Entities
 
         [ForeignKey("Vendor")]
         public Guid VendorId { get; set; }
+
+        public virtual ICollection<RentItem> RentItems { get; set; }
+
     }
 }
