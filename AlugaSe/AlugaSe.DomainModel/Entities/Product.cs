@@ -10,7 +10,7 @@ namespace AlugaSe.DomainModel.Entities
         public string Name { get; set; }
         public string Description { get; set; }
         public decimal UnitPrice { get; set; }
-        public Vendor Vendor { get; set; }
+        public virtual Vendor Vendor { get; set; }
 
         [ForeignKey("Vendor")]
         public Guid VendorId { get; set; }

@@ -21,7 +21,10 @@ namespace AlugaSe.Infrastructure.DataAccess.Factories
             //optionsBuilder.UseSqlServer(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Cadu\Documents\Workspace\Infnet\AlugaSe\AlugaSe\AlugaSe.Infrastructure.DataAccess\DB\AlugaSe.mdf;Integrated Security=True");
             //optionsBuilder.UseSqlServer(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Cadu\Documents\Workspace\Infnet\AlugaSe\AlugaSe\AlugaSe.Infrastructure.DataAccess\DB\AlugaSe.mdf;Integrated Security=True");
             optionsBuilder.UseSqlServer("Server=10.255.117.20;Database=AlugaSe;User Id=alugase;Password=0@)8Zc{NNu&AIlblK");
-            
+
+
+            optionsBuilder.UseLazyLoadingProxies();
+
 
             return new AlugaSeContext(optionsBuilder.Options);
         }

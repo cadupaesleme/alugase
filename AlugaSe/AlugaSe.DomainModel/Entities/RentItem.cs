@@ -9,7 +9,7 @@ namespace AlugaSe.DomainModel.Entities
         public virtual Rent Rent { get; set; }
         public decimal UnitPrice { get; set; }
         public decimal Quantity { get; set; }
-        public Product Product { get; set; }
+        public virtual Product Product { get; set; }
         public DateTime InitialDate { get; set; }
         public DateTime EndDate { get; set; }
     }

@@ -8,6 +8,6 @@ namespace AlugaSe.DomainModel.Entities
     {
         public virtual ICollection<RentItem> RentItems { get; set; }
         public DateTime Date { get; set; }
-        public Customer Customer { get; set; }
+        public virtual Customer Customer { get; set; }
     }
 }
