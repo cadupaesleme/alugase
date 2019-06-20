@@ -8,7 +8,9 @@ namespace AlugaSe.DomainService.Interfaces
     public interface IVendorService
     {
         IEnumerable<Vendor> ReadAll();
-        void Insert(Vendor vendor);
-        void Edit(Vendor vendor);
+        void Create(Vendor vendor);
+        void Update(Vendor vendor);
+        Vendor Read(Guid id);
+        void Delete(Guid id);
     }
 }

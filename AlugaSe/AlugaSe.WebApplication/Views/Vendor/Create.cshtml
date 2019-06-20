@@ -23,19 +23,28 @@
                 <span asp-validation-for="Address" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="Identification" class="control-label"></label>
-                <input asp-for="Identification" class="form-control" />
-                <span asp-validation-for="Identification" class="text-danger"></span>
-            </div>
-            <div class="form-group">
                 <label asp-for="BirthDay" class="control-label"></label>
-                <input asp-for="BirthDay" class="form-control" />
+                <input type="date" asp-for="BirthDay" class="form-control" />
                 <span asp-validation-for="BirthDay" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <label asp-for="Gender" class="control-label"></label>
-                <input asp-for="Gender" class="form-control" />
+                <select name="Gender"
+                        asp-items="@ViewBag.Genders"
+                        class="form-control">                    
+                </select>
                 <span asp-validation-for="Gender" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label class="control-label">Identification Type</label>
+                <select name="identificationType"
+                        asp-items="@ViewBag.IdentificationTypes"
+                        class="form-control">                    
+                </select>
+            </div>
+            <div class="form-group">
+                <label class="control-label">Identification Number</label>
+                <input type="number" name="identificationNumber" class="form-control" />
             </div>
             <div class="form-group">
                 <input type="submit" value="Create" class="btn btn-default" />

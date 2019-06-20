@@ -26,7 +26,7 @@
             @Html.DisplayNameFor(model => model.Identification)
         </dt>
         <dd>
-            @Html.DisplayFor(model => model.Identification)
+            @Model.Identification.ToString()
         </dd>
         <dt>
             @Html.DisplayNameFor(model => model.BirthDay)
@@ -38,7 +38,7 @@
             @Html.DisplayNameFor(model => model.Gender)
         </dt>
         <dd>
-            @Html.DisplayFor(model => model.Gender)
+            @Model.Gender.ToString()
         </dd>
     </dl>
 </div>

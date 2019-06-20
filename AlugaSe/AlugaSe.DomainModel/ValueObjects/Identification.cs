@@ -51,5 +51,10 @@ namespace AlugaSe.DomainModel.ValueObjects
         {
             return $"{Type.ToString()} {Number.ToString()}";
         }
+
+        public static List<string> ListTypes()
+        {
+            return new List<string>() { "CPF", "CNPJ", "RG", "Passaporte" };
+        }
     }
 }

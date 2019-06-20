@@ -47,5 +47,13 @@ namespace AlugaSe.DomainModel.ValueObjects
         {
             return $"{Description.ToString()}";
         }
+
+        public static List<Gender> ListAll()
+        {
+            return new List<Gender>() {
+                new Gender("Masculino"),
+                new Gender("Feminino"),
+                new Gender("Prefiro Não Declarar") };
+        }
     }
 }

@@ -6,5 +6,6 @@ namespace AlugaSe.DomainModel.Entities
 {
     public class Vendor : Role<Guid>
     {
+        public virtual ICollection<Product> Products { get; set; }
     }
 }
