@@ -5,15 +5,13 @@ using System.Text;
 
 namespace AlugaSe.DomainService.Interfaces
 {
-    public interface IRentService
+    public interface ICustomerService
     {
-        IEnumerable<Rent> ReadAll();
-        void Create(Rent Rent);
-        void Update(Rent Rent);
-        Rent Read(Guid id);
+        IEnumerable<Customer> ReadAll();
+        void Create(Customer Customer);
+        void Update(Customer Customer);
+        Customer Read(Guid id);
         void Delete(Guid id);
         void Complete();
-        void CreateWithItems(Rent Rent);
-
     }
 }

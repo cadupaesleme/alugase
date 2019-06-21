@@ -19,7 +19,7 @@ namespace AlugaSe.DomainService.Services
             _RentItemRepository = RentItemRepository;
         }
 
-        //It necessary to delete all RentItems before edit and save new ones        
+        //It's necessary to delete all RentItems before edit and save new ones        
         public void EditRent(Rent Rent)
         {
             var items = _RentItemRepository.ReadAll().Where(i => i.RentId == Rent.Id);
@@ -61,6 +61,17 @@ namespace AlugaSe.DomainService.Services
         public void Complete()
         {
             _RentRepository.SaveChanges();
+        }
+
+        public void CreateWithItems(Rent Rent)
+        {
+            foreach(var item in Rent.RentItems)
+            {
+                item.Id = Guid.NewGuid();
+            }
+
+            this.Create(Rent);
+            this.Complete();
         }
     }
 }

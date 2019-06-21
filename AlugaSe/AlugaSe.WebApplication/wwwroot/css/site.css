@@ -35,3 +35,43 @@ body {
         display: none;
     }
 }
+
+.rent-title {
+    border-bottom: 3px solid #0094ff;
+}
+
+.spacing {
+    min-height: 3rem;
+}
+
+.rent-item {
+    border-bottom: 2px solid #efe6e6;
+    /*border-top: 1px solid #5f5d5d;*/
+}
+
+.items {
+    margin: 1rem;
+}
+
+    .items div {
+        margin: 2rem .4rem;
+    }
+
+.rent-item .control-label {
+    color: #aba6a6;
+    font-size: 1.2rem;
+    padding-bottom: .4rem;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.item-remove {
+    color: #d44242 !important;
+    padding-top: 3.2rem !important;
+    font-size: 1.5rem !important;
+    cursor: pointer;
+}
+
+.data-rent {
+    margin: 0.8rem 0;
+}

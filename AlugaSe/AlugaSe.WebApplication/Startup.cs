@@ -43,7 +43,17 @@ namespace AlugaSe.WebApplication
 
             services.AddScoped<IVendorRepository, VendorEntityFrameworkRepository>();
             services.AddScoped<IVendorService, VendorService>();
-            //services.AddScoped<VendorService, VendorService>();
+
+            services.AddScoped<ICustomerRepository, CustomerEntityFrameworkRepository>();
+            services.AddScoped<ICustomerService, CustomerService>();
+
+            services.AddScoped<IRentRepository, RentEntityFrameworkRepository>();
+            services.AddScoped<IRentService, RentService>();
+
+            services.AddScoped<IProductRepository, ProductEntityFrameworkRepository>();
+            services.AddScoped<IProductService, ProductService>();
+
+            services.AddScoped<IRentItemRepository, RentItemEntityFrameworkRepository>();
 
         }
 

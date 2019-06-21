@@ -45,7 +45,7 @@
                     @item.Identification.ToString()
                 </td>
                 <td>
-                    @Html.DisplayFor(modelItem => item.BirthDay)
+                    @(item.BirthDay.HasValue ? item.BirthDay.Value.ToShortDateString() : "N/A")
                 </td>
                 <td>
                     @item.Gender.ToString()

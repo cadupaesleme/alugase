@@ -32,7 +32,7 @@
             @Html.DisplayNameFor(model => model.BirthDay)
         </dt>
         <dd>
-            @Html.DisplayFor(model => model.BirthDay)
+            @(Model.BirthDay.HasValue ? Model.BirthDay.Value.ToShortDateString() : "N/A")
         </dd>
         <dt>
             @Html.DisplayNameFor(model => model.Gender)

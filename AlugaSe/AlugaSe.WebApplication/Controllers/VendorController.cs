@@ -59,24 +59,16 @@ namespace AlugaSe.WebApplication.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Name,Address,BirthDay,Id")] Vendor vendor, string gender, string identificationType, string identificationNumber)
+        public IActionResult Create([Bind("Name,Address,BirthDay,Id")] Vendor vendor, string gender, string identificationType, string identificationNumber)
         {
             if (ModelState.IsValid)
             {
                 vendor.Identification = Identification.NewIdentification(identificationType, identificationNumber);
                 vendor.Gender = Gender.NewGender(gender);
 
-                if (vendor.Id == Guid.Empty)
-                {
-                    _vendorService.Create(vendor);
+                vendor.Id = Guid.NewGuid();
 
-                    vendor.Id = Guid.NewGuid();
-                }
-                else
-                {
-                    _vendorService.Update(vendor);
-                }
-
+                _vendorService.Create(vendor);
                 _vendorService.Complete();
 
                 return RedirectToAction(nameof(Index));
@@ -105,6 +97,30 @@ namespace AlugaSe.WebApplication.Controllers
             ViewBag.Genders = new SelectList(Gender.ListAll(), "Description", "Description", vendor.Gender.Description);
             ViewBag.IdentificationTypes = new SelectList(Identification.ListTypes(), vendor.Identification.Type);
 
+
+            return View(vendor);
+        }
+
+        // POST: Vendor/Create
+        // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
+        // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public IActionResult Edit([Bind("Name,Address,BirthDay,Id")] Vendor vendor, string gender, string identificationType, string identificationNumber)
+        {
+            if (ModelState.IsValid)
+            {
+                vendor.Identification = Identification.NewIdentification(identificationType, identificationNumber);
+                vendor.Gender = Gender.NewGender(gender);
+
+                _vendorService.Update(vendor);
+                _vendorService.Complete();
+
+                return RedirectToAction(nameof(Index));
+            }
+
+            ViewBag.Genders = new SelectList(Gender.ListAll(), "Description", "Description");
+            ViewBag.IdentificationTypes = new SelectList(Identification.ListTypes());
 
             return View(vendor);
         }

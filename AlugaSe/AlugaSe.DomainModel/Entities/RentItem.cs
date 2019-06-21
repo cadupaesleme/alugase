@@ -9,7 +9,7 @@ namespace AlugaSe.DomainModel.Entities
     {
         public virtual Rent Rent { get; set; }
         public decimal UnitPrice { get; set; }
-        public decimal Quantity { get; set; }
+        public int Quantity { get; set; }
         public virtual Product Product { get; set; }
         public DateTime InitialDate { get; set; }
         public DateTime EndDate { get; set; }
@@ -19,5 +19,15 @@ namespace AlugaSe.DomainModel.Entities
 
         [ForeignKey("Product")]
         public Guid ProductId { get; set; }
+
+        [NotMapped]
+        public int NumberOfDays
+        {
+            get
+            {
+                var days = (int)(EndDate - InitialDate).TotalDays;                
+                return days + 1;
+            }
+        }
     }
 }
