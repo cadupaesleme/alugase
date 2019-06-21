@@ -75,3 +75,13 @@ body {
 .data-rent {
     margin: 0.8rem 0;
 }
+
+.home-banner {
+    object-fit: cover;
+    height: 40rem;
+}
+
+    .home-banner img {
+        object-fit: cover;
+        
+    }
