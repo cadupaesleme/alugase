@@ -76,12 +76,27 @@ body {
     margin: 0.8rem 0;
 }
 
-.home-banner {
-    object-fit: cover;
+.home-banner {    
     height: 40rem;
+    background-color: #000;
 }
 
     .home-banner img {
-        object-fit: cover;
-        
+        object-fit: cover;        
+        opacity: .9s;        
+        height: 100% !important;
+        width: 100%;
+    }
+
+    .banner-rent{
+        object-position: 50% 60%;
+    }
+
+    .banner-rent-home{
+        object-position: 50% 10%;
+    }
+
+    .banner-subtitle{
+        text-shadow: 0 1px 100px rgba(0, 0, 0, 1);
+        font-size: 2.5rem !important;
     }
