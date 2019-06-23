@@ -19,7 +19,7 @@ namespace AlugaSe.DomainModel.Entities
 
 
         [NotMapped]
-        public int ItemsQtd
+        public int ItemsQt
         {
             get
             {
